@@ -62,7 +62,7 @@ function isPositive( number ) {
 let fruits = ['apple', 'orange', 'banana']
 
 function getLast(array) {
-  if (fruits.isArray(array)){
+  if (Array.isArray(fruits)){
   return fruits[fruits.length - 1]
 }
 }
@@ -76,14 +76,18 @@ console.log('The last item in the array is:', getLast(fruits));
 function find( value, array ) {
   for (let i = 0; i < array.length; i++) {
     if (array[i] === value) {
+      console.log('Does this value exist within the array?');
       return true;
     }
   }
+  console.log('Does this value exist within the array?');
   return false;
 }
 
-console.log(find(5, [1,2,3,4,5,6,7,8]));
-      
+console.log(find(1, [1,2,3,4,5,6,7,8]));
+console.log(find(10, [1,2,3,4,5,6,7,8]));
+
+
 
 
   
